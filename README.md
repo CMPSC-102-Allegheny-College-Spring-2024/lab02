@@ -2,7 +2,9 @@
 
 ## Assigned: Monday, 29 Jan 2024
 
-## Due: Monday, 5 Feb, 2024, 1:30pm
+## Due: Monday, Monday 5 Feb 2024, 2:30pm
+
+## Expiration date: Monday, 12 Feb 2024, 2:30pm
 
 ## Project Goals
 
