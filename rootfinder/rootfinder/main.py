@@ -17,7 +17,7 @@ def main(
     """Calculate the roots of a quadratic equation using the quadratic formula."""
     # create a console for rich text output
     console = Console()
-    # TODO: display the debugging output for the program's command-line arguments
+    # Display (by printing out) the debugging output for the program's command-line arguments
     # TODO: display three lines of output following the expected output
     # --> A label describing the output values
     # --> The value of a
