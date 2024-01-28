@@ -2,7 +2,7 @@
 
 ## Assigned: Monday, 29 Jan 2024
 
-## Due: Monday, Monday 5 Feb 2024, 2:30pm
+## Due: Monday, 5 Feb 2024, 2:30pm
 
 ## Expiration date: Monday, 12 Feb 2024, 2:30pm
 
@@ -16,11 +16,11 @@ You can access this assignment by clicking the link provided to you in Discord o
 
 ## Expected Output
 
-This assignment invites you to implement a quadratic root finding program called `rootfinder`. To learn more about the equations for finding the roots of a quadratic equation, please try out the [quadratic formula calculator](https://www.calculatorsoup.com/calculators/algebra/quadratic-formula-calculator.php). For instance, input `a=1`, `b=2`, and `c=1` into this calculator and see what answer it produces. 
+This assignment invites you to implement a quadratic root finding program called `rootfinder`. To learn more about the equations for finding the roots of a quadratic equation, please try out the [quadratic formula calculator](https://www.calculatorsoup.com/calculators/algebra/quadratic-formula-calculator.php). For instance, input `a=1`, `b=2`, and `c=1` into this calculator and see what answer it produces.
 
 After repairing your program, as explained in the next step of this assignment, it will also be possible for you to run the provided Python program by first typing `poetry install` in the `rootfinder/` directory. Once all necessary dependancies have been loaded, you will be ready to run the next command, `poetry run rootfinder --a 1 --b 2 --c 1` in your terminal window to observe the following output:
 
-```
+``` bash
 ⭐ Calculating the roots of a quadratic equation with:
    a = 1.0
    b = 2.0
@@ -33,7 +33,7 @@ After repairing your program, as explained in the next step of this assignment, 
 
 Does the Python program produce the same output as the quadratic formula calculator site suggests it should? If it does, then try to run the program with different inputs by typing `poetry run rootfinder --a 1 --b 1 --c 1`. In this case, your program should produce the following output:
 
-```
+``` bash
 ⭐ Calculating the roots of a quadratic equation with:
    a = 1.0
    b = 1.0
@@ -56,7 +56,7 @@ Use a `gatorgrade --config config/gatorgrade.yml` command to run GatorGrader to 
 
 If you study the file `rootfinder/rootfinder/main.py` you will see that it has many `TODO` markers that designate the parts of the program that you need to implement before `rootfinder` will produce correct output. If you run the provided test suite with the command `poetry run task test` you will see that it produces output like the following:
 
-```
+``` bash
 ================================= FAILURES =================================
 __________________ test_calculate_x_values_non_imaginary ___________________
 
@@ -116,7 +116,7 @@ This function signature shows that `rootfinder` accepts as input three parameter
 
 As you continue to add and confirm the correctness of `rootfinder`'s functionality, you also study the source code in the `pyproject.toml` file. This file contains the specification of several tasks that will help you to easily run checks on your Python source code. Now, you can run commands like `poetry run task lint` to automatically run all of the linters designed to check the Python source code in your program and its test suite. You can also use the command `poetry run task black` to confirm that your source code adheres to the industry-standard format defined by the `black` tool. If it does not adhere to the standard then you can run the command `poetry run black rootfinder tests` and it will automatically reformat the source code.
 
-```toml
+``` toml
 [tool.taskipy.tasks]
 black = { cmd = "black rootfinder tests --check", help = "Run the black checks for source code format" }
 flake8 = { cmd = "flake8 rootfinder tests", help = "Run the flake8 checks for source code documentation" }
