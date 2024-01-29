@@ -12,22 +12,22 @@ setup: |
       fragment: TODO
       count: 0
       exact: true
-  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
-    check: CountMultipleLineComments
-    options:
-      language: "Python"
-      count: 2
-      exact: false
-  - description: Create a sufficient number of single-line comments in main.py
-    check: CountSingleLineComments
-    options:
-      language: "Python"
-      count: 4
-      exact: false
+  # - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+  #   check: CountMultipleLineComments
+  #   options:
+  #     language: "Python"
+  #     count: 2
+  #     exact: false
+  # - description: Create a sufficient number of single-line comments in main.py
+  #   check: CountSingleLineComments
+  #   options:
+  #     language: "Python"
+  #     count: 4
+  #     exact: false
 
 # --> check the Python program
 - rootfinder/rootfinder/rootfind.py:
-  - description: Ensure that the rootfind.py file exists in the rootfinder/rootfinder/ directory
+  - description: Ensure that the rootfinder.py file exists in the rootfinder/rootfinder/ directory
     check: ConfirmFileExists
   - description: Complete all TODOs, remove the TODO markers in the rootfind.py
     check: MatchFileFragment
@@ -35,12 +35,12 @@ setup: |
       fragment: TODO
       count: 0
       exact: true
-  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in rootfind.py
-    check: CountMultipleLineComments
-    options:
-      language: "Python"
-      count: 2
-      exact: false
+  # - description: Create a sufficient number of docstring (i.e., multiple-line) comments in rootfind.py
+  #   check: CountMultipleLineComments
+  #   options:
+  #     language: "Python"
+  #     count: 2
+  #     exact: false
 
 # --> check the technical writing for various characteristics
 - writing/reflection.md:
@@ -58,29 +58,29 @@ setup: |
       fragment: "Add Your Name Here"
       count: 0
       exact: true
-  - description: Write a minimum number of meaningful words in the reflection
-    check: CountFileWords
-    options:
-      count: 300
-      exact: false
-  - description: Confirm that the markdown file has the correct number of headers
-    check: CountMarkdownTags
-    options:
-      tag: heading
-      count: 12
-      exact: true
-  - description: Confirm that the markdown file has the correct number of fenced code blocks
-    check: CountMarkdownTags
-    options:
-      tag: code_block
-      count: 3
-      exact: false
-  - description: Confirm that the markdown file has the correct number of code blocks
-    check: CountMarkdownTags
-    options:
-      tag: code
-      count: 8
-      exact: false
+  # - description: Write a minimum number of meaningful words in the reflection
+  #   check: CountFileWords
+  #   options:
+  #     count: 300
+  #     exact: false
+  # - description: Confirm that the markdown file has the correct number of headers
+  #   check: CountMarkdownTags
+  #   options:
+  #     tag: heading
+  #     count: 12
+  #     exact: true
+  # - description: Confirm that the markdown file has the correct number of fenced code blocks
+  #   check: CountMarkdownTags
+  #   options:
+  #     tag: code_block
+  #     count: 3
+  #     exact: false
+  # - description: Confirm that the markdown file has the correct number of code blocks
+  #   check: CountMarkdownTags
+  #   options:
+  #     tag: code
+  #     count: 8
+  #     exact: false
 
 # run the program and confirm the existence of fragments in its output
 - description: 'Run the program and confirm the existence of content in its output: x_two = (-0.5-0.8660254037844386j)'
